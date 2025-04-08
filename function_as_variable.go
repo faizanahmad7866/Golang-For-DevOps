@@ -3,11 +3,13 @@ package main
 import "fmt"
 
 func main() {
+
 	fmt.Println("function as variable:")
-	var v func(int) int
-	v = func(x int) int {
-		return x * x
-	}
-	result := v(5)
-	fmt.Println("result =", result)
+	// function as variable
+	var f func(int) int
+	f = func(y int) int { return y + y }
+
+	my_number := f(10)
+
+	fmt.Println("my_number =", my_number)
 }
