@@ -17,3 +17,11 @@ type Rectangle struct {
 func (r Rectangle) Area() float64 {
 	return r.Width * r.Height
 }
+func (r Rectangle) Perimeter() float64 {
+	return 2 * (r.Width + r.Height)
+}
+func main() {
+	// that is struct
+	r := Rectangle{Width: 10, Height: 5}
+	printGeometry(r)
+}
